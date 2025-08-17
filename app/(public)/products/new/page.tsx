@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Input } from "@atoms";
+import { Input, Button } from "@atoms";
 
 export default function NewProductPage() {
   const router = useRouter();
@@ -102,13 +102,13 @@ export default function NewProductPage() {
             />
           </div>
 
-          <button
+          <Button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
             disabled={loading}
+            variant="ghost"
           >
             {loading ? "Menyimpan..." : "Simpan Produk"}
-          </button>
+          </Button>
         </form>
       </div>
     </main>
