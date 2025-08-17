@@ -1,6 +1,6 @@
 import React from "react";
 
-type ButtonProps = {
+interface ButtonProps {
     children: React.ReactNode;
     variant?: "primary" | "secondary" | "ghost";
     onClick?: () => void;
