@@ -15,7 +15,7 @@ export const Navbar = () => {
     ];
 
     return (
-        <nav className="bg-white shadow-sm py-2 fixed w-screen z-[999]">
+        <nav className=" bg-white shadow-sm py-2 sticky top-0 z-[999]">
             <div className="container mx-auto flex items-center justify-between px-4">
                 <Link href="/">
                     <Logo />

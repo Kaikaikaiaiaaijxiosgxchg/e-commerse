@@ -18,7 +18,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen">
         <Hero />
-        <div className="my-25 rounded-md shadow-[0px_0px_3px_2px_rgba(0,_0,_0,_0.1)] p-8">
+        <div className="my-25 rounded-md shadow-sm shadow-primary p-8">
           <div className="mb-10 space-y-1">
             <h2 className="text-center text-4xl font-bold">Produk Terbaru</h2>
             <Logo />

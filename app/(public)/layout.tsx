@@ -10,7 +10,7 @@ export default function PublicLayout({
     <>
         <CartProvider>
           <Navbar />
-          <div className="py-25 mx-30">
+          <div className="container py-10 px-10 mx-auto">
             {children}
           </div>
         </CartProvider>

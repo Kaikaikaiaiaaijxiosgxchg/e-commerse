@@ -12,13 +12,14 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <Link
         href={`/products/${product.id}`}
         className="bg-white rounded-md shadow-sm overflow-hidden">
-            <div className="relative h-40 w-full overflow-hidden">
+            <div className="relative h-40">
+
                 <Image 
-                    src={product.image || Minyak}
+                    src={product.image || 'https://picsum.photos/200/300'}
                     alt={product.name}
+                    priority={false}
+                    className="object-cover aspect-square"
                     fill
-                    className="object-cover"
-                    priority={false}              
                 />
             </div>
 
