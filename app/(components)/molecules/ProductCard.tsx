@@ -11,14 +11,14 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     return (
         <Link
         href={`/products/${product.id}`}
-        className="bg-white rounded-md shadow-sm overflow-hidden">
-            <div className="relative h-40">
+        className="bg-white rounded-md shadow-sm overflow-hidden aspect-auto">
+            <div className="relative aspect-square">
 
                 <Image 
                     src={product.image || 'https://picsum.photos/200/300'}
                     alt={product.name}
                     priority={false}
-                    className="object-cover aspect-square"
+                    className="object-cover"
                     fill
                 />
             </div>
