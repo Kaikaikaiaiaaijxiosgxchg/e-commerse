@@ -1,7 +1,8 @@
-import React from 'react'
+import { Suspense } from 'react';
 import { Product } from '@prisma/client'
-import { ProductCard} from '@molecules';
+import { ProductCard, ProductCardSkeleton } from '@molecules';
 import { Button } from "@atoms";
+
 
 interface AllProductsProps {
     products: Product[]
@@ -19,7 +20,9 @@ export const AllProducts = ({ products }: AllProductsProps) => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 items-center justify-center gap-4 px-5">
             {products.map(product => (
-                <ProductCard key={product.id} product={product} />
+              <Suspense key={product.id} fallback={<ProductCardSkeleton />}>
+                <ProductCard product={product} />
+              </Suspense>
             ))}
           </div>
           <div className="mt-10 flex items-center justify-center">

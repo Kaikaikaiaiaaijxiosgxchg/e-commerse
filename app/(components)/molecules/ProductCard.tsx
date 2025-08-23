@@ -1,7 +1,6 @@
 import { Product } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
-import Minyak from "../../../public/assets/img/product-dump/minyak.jpg";
 
 interface ProductCardProps {
     product: Product;
